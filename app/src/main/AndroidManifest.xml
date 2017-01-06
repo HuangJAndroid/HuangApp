@@ -15,14 +15,8 @@
         <activity
             android:name=".activity.MainActivity"
             android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.ScratchActivity">
+        <activity android:name=".activity.ScratchActivity">
         </activity>
         <activity android:name=".activity.ZhuanPanActivity">
         </activity>
@@ -31,6 +25,15 @@
         <activity android:name=".activity.WebViewActivity">
         </activity>
         <activity android:name=".activity.SlidingActivity">
+        </activity>
+        <activity android:name=".activity.WelcomeActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme.StatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
     </application>
 
