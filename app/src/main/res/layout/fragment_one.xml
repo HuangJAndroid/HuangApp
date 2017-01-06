@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorMain"
-        android:text="对话框"
+        android:text="对话框（打字机）"
         android:textSize="15dp"/>
     <Button
         android:layout_marginLeft="16dp"
@@ -69,4 +69,14 @@
         android:id="@+id/one_btn3"
         android:layout_alignTop="@id/one_btn2"
         android:layout_toRightOf="@id/one_btn2"/>
+    <Button
+        android:layout_marginTop="16dp"
+        android:background="@color/lavender"
+        android:text="text"
+        android:textSize="15sp"
+        android:textColor="@color/colorMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/one_btn11"
+        android:layout_below="@id/one_btn2"/>
 </RelativeLayout>

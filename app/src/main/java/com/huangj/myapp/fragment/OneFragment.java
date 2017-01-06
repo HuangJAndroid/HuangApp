@@ -19,6 +19,7 @@ import com.huangj.myapp.activity.ScratchActivity;
 import com.huangj.myapp.activity.SlidingActivity;
 import com.huangj.myapp.activity.WebViewActivity;
 import com.huangj.myapp.activity.ZhuanPanActivity;
+import com.huangj.myapp.view.PrinterTextView;
 
 import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
@@ -42,8 +43,10 @@ public class OneFragment extends Fragment {
     private ImageView one_iv;
     @ViewInject(R.id.one_btn2)
     private Button one_btn2;
-@ViewInject(R.id.one_btn3)
-private Button one_btn3;
+    @ViewInject(R.id.one_btn3)
+    private Button one_btn3;
+    @ViewInject(R.id.one_btn11)
+    private Button one_btn11;
     public OneFragment() {
         // Required empty public constructor
     }
@@ -63,7 +66,11 @@ private Button one_btn3;
                 //5.0以上的对话框因为父类的theme背景的.9图四周 边距太宽的原因，和宽度设置无关。其实是填满了的，只是四周是透明的而已
                 //自定义style，继承Theme.Dialog，重写背景属性  R.style.dialog
                 Dialog dialog = new Dialog(getActivity(), R.style.dialog);
-                View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_scratch, null);
+                View view = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_print, null);
+                PrinterTextView printerTextView = (PrinterTextView) view.findViewById(R.id.printertext);
+                printerTextView.setPrintText(" //5.0以上的对话框因为父类的theme背景的.9图四周 边距太宽的原因，和宽度设置无关。其实是填满了的，只是四周是透明的而已\n" +
+                        "//自定义style，继承Theme.Dialog，重写背景属性  R.style.dialog");
+                printerTextView.startPrint();
                 dialog.setContentView(view);
                 //返回当前的窗体对象
                 Window win = dialog.getWindow();
@@ -107,6 +114,12 @@ private Button one_btn3;
             }
         });
         one_btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ScratchActivity.class));
+            }
+        });
+        one_btn11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), ScratchActivity.class));

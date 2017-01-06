@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.huangj.myapp.HomeViewPagerAdapter;
+import com.huangj.myapp.adapter.HomeViewPagerAdapter;
 import com.huangj.myapp.R;
 
 import java.util.ArrayList;
