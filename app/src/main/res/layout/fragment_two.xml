@@ -1,4 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="#0f0">
@@ -6,6 +7,7 @@
     <com.huangj.myapp.view.StereoView
         android:id="@+id/stereoView"
         android:layout_width="match_parent"
+
         android:layout_height="88dp"
         android:layout_centerInParent="true">
 
@@ -121,4 +123,4 @@
 
     </com.huangj.myapp.view.StereoView>
 
-</FrameLayout>
+</LinearLayout>

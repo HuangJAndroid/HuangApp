@@ -26,15 +26,25 @@
         </activity>
         <activity android:name=".activity.SlidingActivity">
         </activity>
-        <activity android:name=".activity.WelcomeActivity"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/AppTheme.StatusBar">
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.StatusBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.MyService"
+            android:process=":service">
+        </service>
+        <service
+            android:name=".service.CancelService"
+            android:process=":remote" >
+        </service>
     </application>
 
 </manifest>
