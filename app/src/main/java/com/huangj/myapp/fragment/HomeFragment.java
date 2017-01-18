@@ -1,6 +1,7 @@
 package com.huangj.myapp.fragment;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.huangj.myapp.adapter.HomeViewPagerAdapter;
 import com.huangj.myapp.R;
@@ -43,6 +45,8 @@ public class HomeFragment extends Fragment {
 
         manager = getChildFragmentManager();
         mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        //必须在add之前才会有效
+//        mTabLayout.setTabTextColors(Color.RED, Color.GREEN);
         for (int i = 0; i < titles.length; i++) {
             listTab.add(titles[i]);
             fragmentList.add(new HomeOneFragment());

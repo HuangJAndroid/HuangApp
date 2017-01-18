@@ -116,7 +116,7 @@ public class OneFragment extends Fragment {
         one_btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ScratchActivity.class));
+                startActivity( new Intent(getActivity(), ScratchActivity.class));
             }
         });
         one_btn11.setOnClickListener(new View.OnClickListener() {

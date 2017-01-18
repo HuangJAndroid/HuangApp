@@ -17,7 +17,7 @@
         <item name="android:gravity">center</item>
         <item name="android:padding">3dp</item>
     </style>
-
+<!--对话框宽度铺满-->
  <style name="AcitvityDialog" parent="android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar"></style>
     <style name="dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
@@ -27,4 +27,12 @@
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:backgroundDimEnabled">true</item>
     </style>
+
+   <!--tablayout字体-->
+    <style name="TabText" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">26dp</item>
+    </style>
+
+
 </resources>

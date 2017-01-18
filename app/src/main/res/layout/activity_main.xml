@@ -14,7 +14,7 @@
         android:id="@+id/toolBar"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorMain">
         <TextView
             android:id="@+id/main_tv_login"

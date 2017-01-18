@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         mToolbar = (Toolbar) findViewById(R.id.toolBar);
         //状态栏颜色设置
-        StatusBarCompat.compat(MainActivity.this,getResources().getColor(R.color.colorMain));
+//        StatusBarCompat.compat(MainActivity.this,getResources().getColor(R.color.colorMain));
 
         main_tv_login = (TextView) findViewById(R.id.main_tv_login);
         main_tv_login2 = (TextView) findViewById(R.id.main_tv_login2);
