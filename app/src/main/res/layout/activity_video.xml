@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huangj.myapp.activity.VideoActivity">
+<io.vov.vitamio.widget.VideoView
+    android:id="@+id/videoView"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"/>
+    <RelativeLayout
+        android:layout_alignBottom="@id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+        <ImageView
+            android:id="@+id/play"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mediacontroller_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <SeekBar
+            android:layout_toLeftOf="@+id/time"
+            android:layout_toRightOf="@id/play"
+            android:layout_centerVertical="true"
+            style="@style/MediaController_SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:max="1000"/>
+        <TextView
+            android:paddingRight="6dp"
+            android:layout_toLeftOf="@+id/all"
+            android:id="@+id/time"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:text="20:17"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/all"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_love"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+    </RelativeLayout>
+</RelativeLayout>

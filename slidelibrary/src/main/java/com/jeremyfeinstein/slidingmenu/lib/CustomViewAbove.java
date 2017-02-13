@@ -157,7 +157,7 @@ public class CustomViewAbove extends ViewGroup {
 	}
 
 	/**
-	 * Simple implementation of the {@link OnPageChangeListener} interface with stub
+	 * Simple implementation of the {@link OnPageChangeListener} myinterface with stub
 	 * implementations of each method. Extend this if you do not intend to override
 	 * every method of {@link OnPageChangeListener}.
 	 */

@@ -18,12 +18,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.huangj.myapp.R;
-import com.huangj.myapp.utils.ScratchTextView;
+import com.huangj.myapp.view.ScratchTextView;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
-
-import static android.icu.lang.UCharacter.JoiningGroup.E;
 
 public class ScratchActivity extends Activity {
 

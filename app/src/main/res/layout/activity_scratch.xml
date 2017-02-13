@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context="com.huangj.myapp.activity.ScratchActivity">
-    <com.huangj.myapp.utils.ScratchTextView
+    <com.huangj.myapp.view.ScratchTextView
         android:id="@+id/rubbler"
         android:layout_centerInParent="true"
         android:layout_y="100dip"

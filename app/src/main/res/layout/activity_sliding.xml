@@ -1,28 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
+<com.huangj.myapp.view.slideview.SlideSideMenuTransitionLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/drawerLayout"
+    android:id="@+id/slide_side_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lavender0">
 
-
     <LinearLayout
-        android:background="@mipmap/ic_launcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorMain"
+        android:padding="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"
+            android:text="Item 1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:text="Item 2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:text="Item 3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:text="Item 4"/>
+    </LinearLayout>
+
+    <com.huangj.myapp.view.slideview.SlideSideMenuContentCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/sliding_btn"
-        android:background="@drawable/selector_pressed"
-        android:textSize="15sp"
-        android:textColor="#ffff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
-<FrameLayout
-    android:id="@+id/id_left_menu_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="left"
-    android:tag="LEFT"></FrameLayout>
-</android.support.v4.widget.DrawerLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lavender0">
+            <ImageView
+                android:layout_margin="@dimen/fiveteen_dp"
+                android:id="@+id/image"
+                android:src="@drawable/ic_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="40dp"
+                android:text="侧 滑"/>
+
+            </RelativeLayout>
+        </com.huangj.myapp.view.slideview.SlideSideMenuContentCardView>
+</com.huangj.myapp.view.slideview.SlideSideMenuTransitionLayout>

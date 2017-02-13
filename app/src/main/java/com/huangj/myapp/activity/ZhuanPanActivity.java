@@ -1,10 +1,11 @@
 package com.huangj.myapp.activity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.huangj.myapp.R;
-import com.huangj.myapp.utils.ZhuanPanView;
+import com.huangj.myapp.view.ZhuanPanView;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -32,6 +33,9 @@ public class ZhuanPanActivity extends AppCompatActivity {
     EditText time;
     @ViewInject(R.id.zhuanpan_btn)
     Button zhuangpan_btn;
+    @ViewInject(R.id.zhuanpan_detail)
+    Button zhuanpan_detail;
+
     int s,times=1800,degrees=8888;
     String [] data = new String[]{"一等奖","二等奖","三等奖","四等奖","五等奖","六等奖","七等奖","八等奖"};
     @Override
@@ -109,6 +113,25 @@ public class ZhuanPanActivity extends AppCompatActivity {
                 times = Integer.parseInt(time.getText().toString());
                 degrees = Integer.parseInt(degree.getText().toString());
                 Toast.makeText(ZhuanPanActivity.this,"时间："+times+"，度数："+degrees,Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        zhuanpan_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialog = new Dialog(ZhuanPanActivity.this);
+                View view = LayoutInflater.from(ZhuanPanActivity.this).inflate(R.layout.dialog_zhuanpan, null);
+                dialog.setContentView(view);
+//                Window win = dialog.getWindow();
+//                win.getDecorView().setPadding(0, 0, 0, 0);
+//                WindowManager.LayoutParams lp = win.getAttributes();
+//                lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+//                lp.height = 500;
+                //将修改的内容给当前窗体进行设置
+//                win.setAttributes(lp);
+                //设置窗体弹出和退出的动画(用style描述)
+//                win.setWindowAnimations(R.style.DialogAnimation);
+                dialog.show();
             }
         });
     }
