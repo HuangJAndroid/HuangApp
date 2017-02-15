@@ -60,7 +60,7 @@
         <activity android:name=".activity.VideoActivity"
                   android:label="Media/MediaPlayer">
         </activity>
-        <activity android:name=".activity.OneListActivity">
+        <activity android:name=".activity.AttributeActivity">
         </activity>
     </application>
 

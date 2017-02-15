@@ -10,21 +10,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.huangj.myapp.R;
 import com.huangj.myapp.activity.MyPreferenceActivity;
-import com.huangj.myapp.activity.OneListActivity;
+import com.huangj.myapp.activity.AttributeActivity;
 import com.huangj.myapp.activity.ScratchActivity;
 import com.huangj.myapp.activity.SlidingActivity;
 import com.huangj.myapp.activity.VideoActivity;
 import com.huangj.myapp.activity.WebViewActivity;
 import com.huangj.myapp.activity.ZhuanPanActivity;
 import com.huangj.myapp.myinterface.WordWrapListener;
-import com.huangj.myapp.utils.ColorUtils;
 import com.huangj.myapp.view.PrinterTextView;
 import com.huangj.myapp.view.WordWrapView;
 
@@ -32,37 +30,21 @@ import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import static com.huangj.myapp.R.id.one_iv;
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class OneFragment extends Fragment {
 
     private View view;
-    //    @ViewInject(R.id.one_btn)
-    //    private Button one_btn;
-    //    @ViewInject(R.id.one_btn1)
-    //    private Button one_btn1;
-    //    @ViewInject(R.id.one_btn01)
-    //    private Button  one_btn01;
-    //    @ViewInject(R.id.one_btn02)
-    //    private Button one_btn02;
     @ViewInject(R.id.one_iv)
     private ImageView one_iv;
 
-    //    @ViewInject(R.id.one_btn2)
-    //    private Button one_btn2;
-    //    @ViewInject(R.id.one_btn3)
-    //    private Button one_btn3;
-    //    @ViewInject(R.id.one_btn11)
-    //    private Button one_btn11;
     public OneFragment() {
         // Required empty public constructor
     }
 
     private String[] strs = new String[]{"对话框（打印机）", "PreferenceActivity", "WebView", "大转盘",
-            "炫侧滑", "刮刮卡", "视频","只有listview"};
+            "炫侧滑", "刮刮卡", "视频","状态栏..."};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -136,7 +118,7 @@ public class OneFragment extends Fragment {
                         startActivity(new Intent(getActivity(), VideoActivity.class));
                         break;
                     case 7:
-                        startActivity(new Intent(getActivity(), OneListActivity.class));
+                        startActivity(new Intent(getActivity(), AttributeActivity.class));
                         break;
                 }
             }

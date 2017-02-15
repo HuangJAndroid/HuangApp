@@ -24,7 +24,7 @@ public class WelcomeActivity extends Activity {
 
     @ViewInject(R.id.iv_welcome)
     ImageView iv_welcome;
-    private static final int ANIMATION_TIME = 2000;
+    private static final int ANIMATION_TIME = 4000;
 
     private static final float SCALE_END = 1.13F;
 
